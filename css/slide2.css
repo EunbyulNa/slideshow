@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+li {
+  list-style:none;
+ }
+
+a {
+  text-decoration:none;
+ }
+
+body {
+  font-size:;
+  font-family:'맑은 고딕', sans-serif;
+}
+
+
+/*    -- header --    */
+header {
+  text-align: center;
+  border-bottom: 1px solid #999;
+}
+
+
+h1 {
+  display: inline-block;
+  width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+
+nav {
+  width: 1200px;
+  height: 80px;
+  margin: auto;
+  text-align: center;
+}
+
+nav li {
+  position: relative;
+  display: inline-block;
+}
+
+nav li:first-child::after {
+  display: none;
+}
+
+nav li::after {
+  position: absolute;
+  top: 40px;
+  left: -5px;
+display: block;
+content: "";
+width: 4px;
+height: 3px;
+background-color: #d22929;
+}
+
+nav li a:link {
+  width: 200px;
+  line-height: 80px;
+  margin: 0 10px;
+  color: #999;
+}
+
+nav li.gnb_red a {
+  color: #d22929;
+}
+
+nav li a:link:hover{
+  color: #d22929;
+}
+
+
+#slide_wrap {
+  position: relative;
+  min-width: 800px;
+ height: 360px;
+ overflow: hidden;
+
+}
+
+#slides {
+position: absolute;
+width: 100%;
+height: 100%;
+}
+
+#slides .slide {
+ position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+#slides .slide img {
+position: absolute;
+left: 50%;
+margin-left: -960px;
+}
+
+.arrow {
+
+}
+
+.arrow a {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: block;
+  width: 96px;
+  height: 55px;
+  font-size: 0;
+}
+
+.arrow a.disabled {
+  display: none;
+}
+
+.arrow a.prev {
+  background-image: url('../img/btn-prev.png');
+  margin-left: -920px;
+}
+
+.arrow a.next {
+  background: url('../img/btn-next.png');
+margin-left: 800px;
+}
+
+.indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  text-align: center;
+  height: 20px;
+}
+
+.indicator a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  color: #fff;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+
+}
+
+.indicator a.active {
+  background: #000;
+}
